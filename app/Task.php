@@ -29,6 +29,13 @@ class Task extends Model
         'assign'
     ];
 
+    protected $visible = [
+        'name',
+        'description',
+        'status',
+        'assign'
+    ];
+
 
     /**
      * The attributes that should be hidden for arrays.

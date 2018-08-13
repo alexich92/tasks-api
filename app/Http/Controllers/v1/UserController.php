@@ -250,7 +250,6 @@ class UserController extends Controller
             $rules = [
                 'name' => 'required',
                 'description' => 'required',
-                'status' => 'required|integer|between:1,4',
                 'assign'=>'required|integer'
             ];
 
@@ -260,6 +259,7 @@ class UserController extends Controller
             if (!$validator->passes()) {
                 return $this->returnBadRequest('Please fill all required fields');
             }
+
 
             $task = new Task();
             $task->name = $request->name;
